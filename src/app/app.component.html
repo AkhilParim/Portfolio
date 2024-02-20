@@ -5,38 +5,27 @@
     <p class="name">Hello, I'm Akhil Parim</p>
     <p class="title">Full Stack Web Developer</p>
   </div>
-  <div class="experience">
-    <div class="experience1">
-      <p class="dates">2022 - present</p>
-      <div class="padding">
-        <div class="main">
-          <p class="title">
-            Title Developer
-          </p>
-          <p class="subtitle">
-            Subtitle, Subtitle
-          </p>
-          <p class="content">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          </p>
+
+  <!-- Experience Section -->
+  <div class="experience-container">
+    <p class="section-heading">Experience</p>
+    <ng-container *ngFor="let exp of experiences; index as i">
+      <div class="experience-wrapper" [ngClass]="i%2 == 0 ? 'exp-left' : 'exp-right'">
+        <p class="dates">{{ exp.start }} - {{ exp.end }}</p>
+        <div class="main-wrapper">
+          <div class="main">
+            <p class="title">
+              {{ exp.title }}
+            </p>
+            <p *ngIf="exp.subtitle" class="subtitle">
+              {{ exp.subtitle }}
+            </p>
+            <p class="content">
+              {{ exp.content }}
+            </p>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="experience2">
-      <p class="dates">2021 - 2022</p>
-      <div class="padding">
-        <div class="main">
-          <p class="title">
-            Title Developer
-          </p>
-          <p class="subtitle">
-            Subtitle, Subtitle
-          </p>
-          <p class="content">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          </p>
-        </div>
-      </div>
-    </div>
+    </ng-container>
   </div>
 </div>

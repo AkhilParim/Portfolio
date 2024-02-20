@@ -16,89 +16,103 @@
             z-index: -1;
         }
         .name {
-            font-size: 80px;
+            font-size: 60px;
+            font-family: 'Poppins';
+            font-weight: 700;
         }
         .title {
-            font-size: 120px;
+            font-size: 80px;
+            font-family: 'Poppins';
+            font-weight: 700;
         }
     }
-    .experience {
-        height: 800px;
+
+
+    /*  Experience section  */
+
+    .experience-container {
         width: 100%;
         background-color: #000;
-        padding-top: 42px;
-        .experience1 {
-            padding-left: calc(50% - 1px);
-            padding-right: 4%;
+        padding: 42px 0 84px;
+        .section-heading {
+            font-size: 60px;
+            color: #fff;
+            text-align: center;
+            margin-bottom: 48px;
+            font-family: 'Poppins';
+            background: -webkit-linear-gradient(#008AEC, #03D1DC);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .experience-wrapper {
             position: relative;
+            font-family: 'Nunito';
+            *::selection {
+                background: #9B4444;
+                color: #fff;
+            }
             .dates {
                 position: absolute;
-                right: calc(50% + 24px);
+                top: 60px;
                 color: #747474;
                 font-size: 18px;
-                top: 60px;
             }
-            .padding {
-                border-left: 2px solid #747474;
+            .main-wrapper {
                 padding-top: 48px;
                 .main {
                     color: #fff;
                     border: 1px solid #747474;
                     padding: 24px;
-                    margin-left: 24px;
-                    border-radius: 24px;
-                    color: #747474;
+                    border-radius: 36px;
                     .title {
-                        font-size: 36px;
+                        font-size: 28px;
+                        color: #afafaf;
+                        font-weight: 600;
                     }
                     .subtitle {
                         font-size: 18px;
-                        margin-bottom: 10px
+                        margin-bottom: 10px;
+                        color: #afafaf;
+                        font-weight: 600;
+
                     }
                     .content {
                         font-size: 20px;
                         line-height: 26px;
+                        color: #747474;
                     }
                 }
             }
-        }
 
-        .experience2 {
-            padding-right: calc(50% - 1px);
-            padding-left: 4%;
-            position: relative;
-            .dates {
-                position: absolute;
-                left: calc(50% + 24px);
-                top: 60px;
-                color: #747474;
-                font-size: 18px;
-            }
-            .padding {
-                border-right: 2px solid #747474;
-                padding-top: 48px;
+            /*  CSS specific to left and right in Experience  */
+
+            &.exp-left {
+                padding-right: calc(50% - 1px);
+                padding-left: 4%;
+                .dates {
+                    left: calc(50% + 24px);
+                }
+                .main-wrapper {
+                    border-right: 2px solid #747474;
+                }
                 .main {
-                    color: #fff;
-                    border: 1px solid #747474;
-                    padding: 24px;
-                    // margin-top: 24px;
                     margin-right: 24px;
-                    border-radius: 24px;
-                    color: #747474;
-                    .title {
-                        font-size: 36px;
-                    }
-                    .subtitle {
-                        font-size: 18px;
-                        margin-bottom: 10px
-                    }
-                    .content {
-                        font-size: 20px;
-                        line-height: 26px;
-                    }
+                }
+            }
+            &.exp-right {
+                padding-left: calc(50% - 1px);
+                padding-right: 4%;
+                .dates {
+                    right: calc(50% + 24px);
+                }
+                .main-wrapper {
+                    border-left: 2px solid #747474;
+                }
+                .main {
+                    margin-left: 24px;
                 }
             }
         }
-
     }
+
 }
