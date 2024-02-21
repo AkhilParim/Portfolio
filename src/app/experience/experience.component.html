@@ -1,0 +1,21 @@
+<div class="experience-container">
+    <p class="section-heading">Experience</p>
+    <ng-container *ngFor="let exp of experiences; index as i">
+      <div class="experience-wrapper" [ngClass]="i%2 == 0 ? 'exp-left' : 'exp-right'">
+        <p class="dates">{{ exp.start }} - {{ exp.end }}</p>
+        <div class="card-wrapper">
+          <div class="card">
+            <p class="title">
+              {{ exp.title }}
+            </p>
+            <p *ngIf="exp.subtitle" class="subtitle">
+              {{ exp.subtitle }}
+            </p>
+            <p class="content">
+              {{ exp.content }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+  </div>
