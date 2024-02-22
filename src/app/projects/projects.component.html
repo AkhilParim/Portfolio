@@ -1,5 +1,5 @@
 <div class="projects-container">
-    <p class="section-header">
+    <p class="section-heading">
         Projects
     </p>
     <div class="projects">
@@ -7,6 +7,9 @@
             <div class="project">
                 <div class="title">{{ pro.title }}</div>
                 <div class="subtitle">{{ pro.subtitle }}</div>
+                <div class="content" *ngIf="pro.content">
+                    {{ pro.content }}
+                </div>
                 <div *ngIf="pro.url" class="button-wrapper">
                     <div class="button">
                         Visit

@@ -1,22 +1,10 @@
 .projects-container {
     padding: 42px 0 84px;
-    .section-header {
-        font-size: 60px;
-        color: #fff;
-        text-align: center;
-        margin-bottom: 48px;
-        font-family: 'Poppins';
-        font-weight: 800;
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
     .projects {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        font-family: 'Nunito';
         .project {
             display: flex;
             flex-direction: column;
@@ -25,6 +13,7 @@
             color: #fff;
             .title { font-size: 28px; }
             .subtitle { font-size: 20px; }
+            .content { margin-top: 16px; }
             .button-wrapper {
                 --border-radius: 12px;
                 --height: 40px;

@@ -5,6 +5,10 @@ import { Injectable } from '@angular/core';
 })
 export class AppService {
 
+  aboutMe = `Hi. I'm Akhil. I'm a Full Stack web developer with a passion for Frontend web development.
+            I'm commited to building and delivering captivating modern websites.
+            With a proactive approach to problem-solving, I’m dedicated to making a positive impact.
+            Let's connect and explore how we can collaborate to achieve our goals together.`
   experiences = [
     {
       title: 'Title Developer',
@@ -40,16 +44,20 @@ export class AppService {
     {
       title: 'Tesla Dashboard UI',
       subtitle: 'Angular',
+      content: 'Enhancing Learnability, Efficiency, and Safety of Tesla Dashboard UI.',
       url: 'hee'
     },
     {
       title: 'Crop Recommendation System',
-      subtitle: 'Javascript, Flask'
+      subtitle: 'Javascript, Flask',
+      content: 'Interactive web app for accurate crop rotation suggestions.'
     },
     {
       title: 'My Community',
       subtitle: 'Javascript, MySQL',
+      content: 'A web app that connects local businesses within the community.',
       url: 'hee'
     },
   ]
+
 }

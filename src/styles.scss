@@ -6,10 +6,34 @@
 // Nunito
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200..1000&display=swap');
 
+:root {
+    --title-font: 'Poppins';
+    --primary-font: 'Nunito';
+}
 body {
     background-color: #000;
     margin: 0;
+    font-family: var(--primary-font);
     p {
         margin: 0;
     }
+    *::selection {
+        background: #9B4444;
+        color: #fff;
+    }
+}
+
+.section-heading {
+    font-size: 60px;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 48px;
+    font-family: var(--title-font);
+    font-weight: 800;
+    // background: -webkit-linear-gradient(#008AEC, #03D1DC);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-user-select: none;
+    user-select: none;
 }
