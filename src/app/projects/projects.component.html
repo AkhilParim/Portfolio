@@ -1,0 +1,19 @@
+<div class="projects-container">
+    <p class="section-header">
+        Projects
+    </p>
+    <div class="projects">
+        <ng-container *ngFor="let pro of projects">
+            <div class="project">
+                <div class="title">{{ pro.title }}</div>
+                <div class="subtitle">{{ pro.subtitle }}</div>
+                <div *ngIf="pro.url" class="button-wrapper">
+                    <div class="button">
+                        Visit
+                        <img [src]="'/assets/arrow.svg'" alt="">
+                    </div>
+                </div>
+            </div>
+        </ng-container>
+    </div>
+</div>

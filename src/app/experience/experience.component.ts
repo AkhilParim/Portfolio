@@ -6,7 +6,7 @@ import { AppService } from '../app.service';
 @Component({
   selector: 'app-experience',
   standalone: true,
-  imports: [CommonModule],
+  imports: [ CommonModule ],
   templateUrl: './experience.component.html',
   styleUrl: './experience.component.scss'
 })

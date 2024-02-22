@@ -35,4 +35,21 @@ export class AppService {
       end: "2022"
     },
   ]
+
+  projects = [
+    {
+      title: 'Tesla Dashboard UI',
+      subtitle: 'Angular',
+      url: 'hee'
+    },
+    {
+      title: 'Crop Recommendation System',
+      subtitle: 'Javascript, Flask'
+    },
+    {
+      title: 'My Community',
+      subtitle: 'Javascript, MySQL',
+      url: 'hee'
+    },
+  ]
 }
