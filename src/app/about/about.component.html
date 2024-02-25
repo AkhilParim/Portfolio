@@ -1,6 +1,8 @@
 <div class="about-container">
     <p class="section-heading">About</p>
     <div class="main">
+        <!-- <img class="back-glow" [src]="'assets/back-glow.svg'" alt="">
+        <img class="back-glow2" [src]="'assets/back-glow2.svg'" alt=""> -->
         {{ aboutMe }}
         <div class="connect">
             <div class="title">
@@ -8,13 +10,19 @@
             </div>
             <div class="links">
                 <a href="https://github.com/AkhilParim" target="_blank">
-                    <img [src]="'/assets/github.svg'" alt="GitHub">
+                    <div class="bg">
+                        <img [src]="'/assets/github.svg'" alt="GitHub">
+                    </div>
                 </a>
                 <a href="https://www.linkedin.com/in/akhil-parim/" target="_blank">
-                    <img [src]="'/assets/linkedin.svg'" alt="LinkedIn">
+                    <div class="bg">
+                        <img [src]="'/assets/linkedin.svg'" alt="LinkedIn">
+                    </div>
                 </a>
                 <a href="mailto:aparim3@uic.edu" target="_blank">
-                    <img [src]="'/assets/email.png'" alt="Email">
+                    <div class="bg">
+                        <img [src]="'/assets/email.png'" alt="Email">
+                    </div>
                 </a>  
             </div>
         </div>

@@ -12,6 +12,8 @@
         justify-content: center;
         color: #fff;
         text-align: center;
+        user-select: none;
+        -webkit-user-select: none;
         .name {
             font-size: 80px;
             font-family: 'Poppins';

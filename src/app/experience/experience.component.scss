@@ -1,6 +1,6 @@
 
 $title-text-color: #afafaf;
-$primary-text-color: #747474;
+$secondary-text-color: #747474;
 $border-color: #747474;
 
 
@@ -9,23 +9,44 @@ $border-color: #747474;
     padding: 42px 0 84px;
     .experience-wrapper {
         position: relative;
+        --gap-width: 60px;
+        --gap-height: 60px;
+        --gap-distance-from-top: 30px;
         .dates {
             position: absolute;
-            top: 60px;
-            color: $primary-text-color;
+            line-height: var(--gap-height);
+            top: var(--gap-distance-from-top);
+            color: $secondary-text-color;
             font-size: 18px;
+        }
+        .gap {
+            position: absolute;
+            color: $secondary-text-color;
+            top: var(--gap-distance-from-top);
+            width: var(--gap-width);
+            height: var(--gap-height);
+            background-color: #000;
+            border-radius: 50%;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .point {
+                border-radius: 50%;
+                background-color: $secondary-text-color;
+                height: 8px;
+                width: 8px;
+            }
         }
         .card-wrapper {
             padding-top: 48px;
             .card {
                 --alpha: calc(var(--active, 0) * 0.15);
-                --border-radius: 0px;
                 &:is(:hover, :focus-within) {
                     --active: 1;
                 }
                 border: 1px solid $border-color;
                 padding: 24px;
-                border-radius: var(--border-radius);
                 background-attachment: fixed;
                 position: relative;
                 .title {
@@ -43,7 +64,7 @@ $border-color: #747474;
                 .content {
                     font-size: 20px;
                     line-height: 26px;
-                    color: $primary-text-color;
+                    color: $secondary-text-color;
                 }
             }
 
@@ -51,16 +72,15 @@ $border-color: #747474;
 
             .card::before {
                 --alpha: 1;
-                --border-width: 4px;
+                --card-border-width: 4px;
                 content: "";
                 position: absolute;
                 inset: 0;
-                border-radius: var(--border-radius);
                 mask:
-                    linear-gradient(#fff, #fff) 0 0 / 100% var(--border-width),
-                    linear-gradient(#fff, #fff) 100% 0 / var(--border-width) 100%,
-                    linear-gradient(#fff, #fff) 0 100% / 100% var(--border-width),
-                    linear-gradient(#fff, #fff) 0 0 / var(--border-width) 100%;
+                    linear-gradient(#fff, #fff) 0 0 / 100% var(--card-border-width),
+                    linear-gradient(#fff, #fff) 100% 0 / var(--card-border-width) 100%,
+                    linear-gradient(#fff, #fff) 0 100% / 100% var(--card-border-width),
+                    linear-gradient(#fff, #fff) 0 0 / var(--card-border-width) 100%;
                 mask-repeat: no-repeat;
             }
             .card, .card::before {
@@ -81,7 +101,10 @@ $border-color: #747474;
             padding-right: calc(50% - 1px);
             padding-left: 4%;
             .dates {
-                left: calc(50% + 24px);
+                left: calc(50% + var(--gap-width) / 2);
+            }
+            .gap {
+                left: calc(50% - var(--gap-width) / 2);
             }
             .card-wrapper {
                 border-right: 2px solid $border-color;
@@ -94,7 +117,10 @@ $border-color: #747474;
             padding-left: calc(50% - 1px);
             padding-right: 4%;
             .dates {
-                right: calc(50% + 24px);
+                right: calc(50% + var(--gap-width) / 2);
+            }
+            .gap {
+                right: calc(50% - var(--gap-width) / 2);
             }
             .card-wrapper {
                 border-left: 2px solid $border-color;
