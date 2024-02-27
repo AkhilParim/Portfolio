@@ -1,3 +1,17 @@
+$name-font-size: clamp(2rem, 4vw + 1rem, 10rem);
+$title-font-size: clamp(3rem, 5vw + 1rem, 12rem);
+
+.scrollable-container {
+    --gap: 0rem;
+    --title-line-height: normal;
+    --name-line-height: normal;
+    @media (max-width: 480px) {
+        --gap: 1.5rem;
+        --title-line-height: $title-font-size;
+        --name-line-height: $name-font-size;
+    }
+}
+
 .scrollable-container {
     background: text fixed url(/assets/background.svg), #000;
     background-size: cover;
@@ -15,14 +29,17 @@
         user-select: none;
         -webkit-user-select: none;
         .name {
-            font-size: 80px;
+            font-size: $name-font-size;
             font-family: 'Poppins';
             font-weight: 800;
+            margin-bottom: var(--gap);
+            line-height: var(--name-line-height);
         }
         .title {
-            font-size: 100px;
+            font-size: $title-font-size;
             font-family: 'Poppins';
             font-weight: 800;
+            line-height: var(--title-line-height);
         }
     }
     .footer-line {

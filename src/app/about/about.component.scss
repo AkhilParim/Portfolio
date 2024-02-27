@@ -1,5 +1,16 @@
 .about-container {
-    padding: 0 20% 10%;
+    --padding: 0 clamp(2rem, 20%, 20rem) 10%;
+    --justify-text: justify;
+    --font-size: 20px;
+    @media (max-width: 480px) {
+        --padding: 0 36px;
+        --justify-text: 'left';
+        --font-size: 16px;
+    }
+}
+
+.about-container {
+    padding: var(--padding);
     .main {
         .back-glow {
             position: absolute;
@@ -12,7 +23,7 @@
             left: -100%;
         }
         position: relative;
-        text-align: justify;
+        text-align: var(--justify-text);
         height: 100%;
         display: flex;
         flex-direction: column;
