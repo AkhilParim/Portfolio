@@ -5,16 +5,20 @@ $title-font-size: clamp(3rem, 5vw + 1rem, 12rem);
     --gap: 0rem;
     --title-line-height: normal;
     --name-line-height: normal;
+    --background-size: cover;
     @media (max-width: 480px) {
         --gap: 1.5rem;
         --title-line-height: $title-font-size;
         --name-line-height: $name-font-size;
     }
+    @media (max-width: 1194px) {
+        --background-size: contain;
+    }
 }
 
 .scrollable-container {
-    background: text fixed url(/assets/background.svg), #000;
-    background-size: cover;
+    background: text fixed center center url(/assets/background.svg), #000;
+    background-size: var(--background-size);
     padding-bottom: 10%;
     .home {
         -webkit-text-fill-color: transparent;

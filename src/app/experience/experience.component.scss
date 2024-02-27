@@ -2,22 +2,68 @@
 $title-text-color: #afafaf;
 $secondary-text-color: #747474;
 $border-color: #747474;
+$breakpoint: 768px;
 
+@mixin exp-left {
+    padding-right: calc(50% - 1px);
+    padding-left: 4%;
+    .dates {
+        left: calc(50% + var(--gap-width) / 2);
+    }
+    .gap {
+        left: calc(50% - var(--gap-width) / 2);
+    }
+    .card-wrapper {
+        border-right: 2px solid $border-color;
+    }
+    .card {
+        margin-right: 24px;
+    }
+}
+
+@mixin exp-right {
+    padding-left: calc(50% - 1px);
+    padding-right: 4%;
+    .dates {
+        right: calc(50% + var(--gap-width) / 2);
+    }
+    .gap {
+        right: calc(50% - var(--gap-width) / 2);
+    }
+    .card-wrapper {
+        border-left: 2px solid $border-color;
+    }
+    .card {
+        margin-left: 24px;
+    }
+}
+
+.experience-container {
+    --content-font-size: 20px;
+    @media (max-width: 480px) {
+        --content-font-size: 16px;
+    }
+}
 
 .experience-container {
     width: 100%;
-    padding: 42px 0 84px;
+    padding: 0 0 min(15%, 84px);
     .experience-wrapper {
         position: relative;
         --gap-width: 60px;
         --gap-height: 60px;
         --gap-distance-from-top: 30px;
         .dates {
-            position: absolute;
-            line-height: var(--gap-height);
             top: var(--gap-distance-from-top);
             color: $secondary-text-color;
-            font-size: 18px;
+            &.sm-screens {
+                display: none;
+            }
+            &.lg-screens {
+                line-height: var(--gap-height);
+                position: absolute;
+                display: block;
+            }
         }
         .gap {
             position: absolute;
@@ -56,13 +102,12 @@ $border-color: #747474;
                 }
                 .subtitle {
                     font-size: 18px;
-                    margin-bottom: 10px;
                     color: $title-text-color;
-                    font-weight: 600;
-
+                    font-weight: 600;             
                 }
                 .content {
-                    font-size: 20px;
+                    margin-top: 10px;
+                    font-size: var(--content-font-size);
                     line-height: 26px;
                     color: $secondary-text-color;
                 }
@@ -94,40 +139,33 @@ $border-color: #747474;
                 background-attachment: fixed;
             }
         }
+    }
+}
 
-        /*  CSS specific to left and right in Experience  */
-
-        &.exp-left {
-            padding-right: calc(50% - 1px);
-            padding-left: 4%;
-            .dates {
-                left: calc(50% + var(--gap-width) / 2);
-            }
-            .gap {
-                left: calc(50% - var(--gap-width) / 2);
-            }
-            .card-wrapper {
-                border-right: 2px solid $border-color;
-            }
-            .card {
-                margin-right: 24px;
-            }
+/*  CSS specific to left and right in Experience  */
+@media (max-width: $breakpoint) {
+    .dates {
+        &.sm-screens { display: block !important; }
+        &.lg-screens { display: none !important; }
+    }
+    .exp-left, .exp-right {
+        padding-left: 24px !important;
+        .gap {
+            left: calc(24px - var(--gap-width) / 2 + 2px)
         }
-        &.exp-right {
-            padding-left: calc(50% - 1px);
-            padding-right: 4%;
-            .dates {
-                right: calc(50% + var(--gap-width) / 2);
-            }
-            .gap {
-                right: calc(50% - var(--gap-width) / 2);
-            }
-            .card-wrapper {
-                border-left: 2px solid $border-color;
-            }
-            .card {
-                margin-left: 24px;
-            }
-        }
+    }
+    .exp-left {
+        @include exp-right;
+    }
+    .exp-right {
+        @include exp-right;
+    }
+}
+@media (min-width: $breakpoint) {
+    .exp-left {
+        @include exp-left;
+    }
+    .exp-right {
+        @include exp-right;
     }
 }

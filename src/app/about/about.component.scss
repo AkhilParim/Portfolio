@@ -1,11 +1,10 @@
 .about-container {
-    --padding: 0 clamp(2rem, 20%, 20rem) 10%;
+    --padding: 0 clamp(2rem, 20%, 20rem) min(15%, 120px);
     --justify-text: justify;
-    --font-size: 20px;
+    --font-size: clamp(1.2rem, 1.5vw, 32px);
     @media (max-width: 480px) {
-        --padding: 0 36px;
+        --padding: 0 36px 20%;
         --justify-text: 'left';
-        --font-size: 16px;
     }
 }
 
@@ -30,7 +29,7 @@
         align-items: center;
         justify-content: center;
         color: #fff;
-        font-size: 20px;
+        font-size: var(--font-size);
         .connect {
             margin-top: 10%;
             text-align: center;
