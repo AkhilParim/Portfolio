@@ -47,8 +47,8 @@ $title-font-size: clamp(3rem, 5vw + 1rem, 12rem);
         }
     }
     .footer-line {
-        height: 0;
-        border-top: 2px dashed #fff;
+        height: 3px;
+        background: linear-gradient(45deg, transparent, #747474, #747474, transparent);
         margin: 0 10%;
     }
 }
