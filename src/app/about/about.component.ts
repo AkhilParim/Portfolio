@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { AppService } from '../app.service';
+import { ElementAnimationDirective } from '../element-animation.directive';
 
 @Component({
   selector: 'app-about',
   standalone: true,
-  imports: [],
+  imports: [ ElementAnimationDirective ],
   templateUrl: './about.component.html',
   styleUrl: './about.component.scss'
 })

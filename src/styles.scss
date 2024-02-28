@@ -37,3 +37,13 @@ body {
     -webkit-user-select: none;
     user-select: none;
 }
+
+// elements animation on scroll
+.animation-hidden {
+    opacity: 0;
+}
+
+.animation-show {
+    opacity: 1;
+    transform: translate(0, 0) !important;
+}

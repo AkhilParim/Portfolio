@@ -1,9 +1,9 @@
 <div class="about-container">
     <p class="section-heading">About</p>
-    <div class="main">
+    <div [appElementAnimation]="{time: '0.5', translateX: '-3%'}" class="main">
         <!-- <img class="back-glow" [src]="'assets/back-glow.svg'" alt="">
         <img class="back-glow2" [src]="'assets/back-glow2.svg'" alt=""> -->
-        {{ aboutMe }}
+        <p>{{ aboutMe }}</p>
         <div class="connect">
             <div class="title">
                 Find me on

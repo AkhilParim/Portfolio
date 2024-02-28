@@ -1,12 +1,13 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AppService } from '../app.service';
+import { ElementAnimationDirective } from '../element-animation.directive';
 
 
 @Component({
   selector: 'app-experience',
   standalone: true,
-  imports: [ CommonModule ],
+  imports: [ CommonModule, ElementAnimationDirective ],
   templateUrl: './experience.component.html',
   styleUrl: './experience.component.scss'
 })
