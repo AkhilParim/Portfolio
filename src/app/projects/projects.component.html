@@ -4,7 +4,7 @@
     </p>
     <div class="projects">
         <ng-container *ngFor="let pro of projects">
-            <div class="project">
+            <div [appElementAnimation]="{time: '0.5', translateX: '-3%'}" class="project">
                 <div class="title">{{ pro.title }}</div>
                 <div class="subtitle">{{ pro.subtitle }}</div>
                 <div class="content" *ngIf="pro.content">

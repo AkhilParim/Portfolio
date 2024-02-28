@@ -23,7 +23,7 @@ export class ElementAnimationDirective implements OnInit {
     if(entry[0].isIntersecting) {
       entry[0].target.classList.add('animation-show');
     } else {
-      // entry[0].target.classList.remove('animation-show');
+      entry[0].target.classList.remove('animation-show');
     }
   }, { threshold: 0.2 });
 }
