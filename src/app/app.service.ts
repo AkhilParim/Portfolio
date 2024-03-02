@@ -9,32 +9,33 @@ export class AppService {
             I'm commited to building and delivering captivating modern websites.
             With a proactive approach to problem-solving, I’m dedicated to making a positive impact.
             Let's connect and explore how we can collaborate to achieve our goals together.`
+
   experiences = [
     {
-      title: 'Title Developer',
-      subtitle: 'Subtitle, Subtitle',
-      content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-      start: "2021",
-      end: "2022"
+      title: 'Web Application Developer',
+      subtitle: 'University of Illinois Chicago',
+      content: `Led the end-to-end creation of a groundbreaking application that significantly streamlined healthcare service
+      providers' ability to assess clients' life priorities. Engineered an intuitive application utilizing drag-and-drop functionality on a 2D grid, facilitating user-friendly
+      card placement and rearrangement, enhanced with captivating animations and advanced logic to ensure a
+      seamless experience.`,
+      start: "May, 2023",
+      end: "Present"
     },
     {
-      title: 'Title Developer',
-      subtitle: 'Subtitle, Subtitle',
-      content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-      start: "2021",
-      end: "2022"
+      title: 'Software Developmer',
+      subtitle: 'MoveInSync Technology Solutions',
+      content: `Contributed to a project with a daily user base of over 500,000 by developing responsive pages using Angular
+      and cloud-based infrastructure, enhancing user engagement and satisfaction. Implemented a sophisticated meeting space reservation feature, simplifying the process of inviting attendees
+      with real-time availability updates. `,
+      start: "Aug, 2021",
+      end: "June 2022"
     },
     {
-      title: 'Title Developer',
-      subtitle: 'Subtitle, Subtitle',
-      content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-      start: "2021",
-      end: "2022"
-    },
-    {
-      title: 'Title Developer',
-      subtitle: 'Subtitle, Subtitle',
-      content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+      title: 'Software Development Intern',
+      subtitle: 'National Informatics Centre (NIC)',
+      content: `Coordinated a project connecting farmers and traders with a vast logistics network of over 500,000 trucks and
+      20,000 tractors, improving market access and distribution efficiency. Developed a web application for visualizing location-based shifts in crop demand and forecasting vehicle
+      requirements on a regional scale, facilitating strategic planning and resource allocation in the agricultural sector.`,
       start: "2021",
       end: "2022"
     },
@@ -42,10 +43,16 @@ export class AppService {
 
   projects = [
     {
+      title: 'Catan Random Board Generator',
+      subtitle: 'Angular',
+      content: 'Random Board Generator to enhance gameplay fairness and reduce setup conflicts.',
+      url: 'https://catanboardgenerator.netlify.app/'
+    },
+    {
       title: 'Tesla Dashboard UI',
       subtitle: 'Angular',
       content: 'Enhancing Learnability, Efficiency, and Safety of Tesla Dashboard UI.',
-      url: 'hee'
+      url: 'https://grishmant.github.io/TeslaDashboardUI/'
     },
     {
       title: 'Crop Recommendation System',
@@ -56,7 +63,6 @@ export class AppService {
       title: 'My Community',
       subtitle: 'Javascript, MySQL',
       content: 'A web app that connects local businesses within the community.',
-      url: 'hee'
     },
   ]
 

@@ -31,6 +31,7 @@
                 border-radius: var(--border-radius);
                 cursor: pointer;
                 transition: width 50ms;
+                a { text-decoration: none; }
                 .button {
                     display: flex;
                     align-items: center;

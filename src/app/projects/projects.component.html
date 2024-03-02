@@ -11,10 +11,12 @@
                     {{ pro.content }}
                 </div>
                 <div *ngIf="pro.url" class="button-wrapper">
-                    <div class="button">
-                        Visit
-                        <img [src]="'/assets/arrow.svg'" alt="">
-                    </div>
+                    <a target="_blank" href="{{ pro.url }}">
+                        <div class="button">
+                            Visit
+                            <img [src]="'/assets/arrow.svg'" alt="">
+                        </div>
+                    </a>
                 </div>
             </div>
         </ng-container>
