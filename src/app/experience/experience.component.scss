@@ -19,6 +19,9 @@ $breakpoint: 768px;
     .card {
         margin-right: 24px;
     }
+    .number {
+        right: 5%;
+    }
 }
 
 @mixin exp-right {
@@ -36,6 +39,9 @@ $breakpoint: 768px;
     .card {
         margin-left: 24px;
     }
+    .number {
+        left: 5%;
+    }
 }
 
 .experience-container {
@@ -49,10 +55,12 @@ $breakpoint: 768px;
     width: 100%;
     padding: 0 0 min(15%, 84px);
     .experience-wrapper {
+        background-color: transparent;
         position: relative;
         --gap-width: 60px;
         --gap-height: 60px;
         --gap-distance-from-top: 30px;
+        --card-distance-from-top: 48px;
         .dates {
             top: var(--gap-distance-from-top);
             color: $secondary-text-color;
@@ -84,8 +92,22 @@ $breakpoint: 768px;
                 width: 8px;
             }
         }
+        .number {
+            opacity: 0.4;
+            margin: var(--card-distance-from-top);
+            background: -webkit-linear-gradient(180deg, #B3438C, #AB5F67, #884FDE);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            user-select: none;
+            position: absolute;
+            font-size: 220px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            font-weight: 900;
+        }
         .card-wrapper {
-            padding-top: 48px;
+            padding-top: var(--card-distance-from-top);
             .card {
                 --alpha: calc(var(--active, 0) * 0.15);
                 &:is(:hover, :focus-within) {
@@ -144,6 +166,9 @@ $breakpoint: 768px;
 
 /*  CSS specific to left and right in Experience  */
 @media (max-width: $breakpoint) {
+    .number {
+        display: none !important;
+    }
     .dates {
         &.sm-screens { display: block !important; }
         &.lg-screens { display: none !important; }
